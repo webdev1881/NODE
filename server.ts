@@ -25,7 +25,7 @@ async function main() {
     })
     app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
         logger.error(err.stack)
-        res.status(500).json({ message: 'MY_ERROR'})
+        res.status(500).json({ message: 'MY_ERROR ' + err})
     })
 
     app.listen(process.env.PORT || 3000, () => {

@@ -9,7 +9,7 @@ dotenv.config()
 
 const app = express()
 app.use(cors())
-app.use( auth )
+// app.use( auth )
 
 
 async function main() {
